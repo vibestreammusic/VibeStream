@@ -1,4 +1,5 @@
 function playDemo() {
-var audio = new Audio('../assets/theLick.wav');
-audio.play();
+    var audio = new Audio('../app/assets/theLick.wav');
+    audio.play();
 };
+
