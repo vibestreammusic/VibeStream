@@ -1,4 +1,5 @@
-const url = 'https://assets-vibestream.netlify.app/assets/data/songList.json';
+const url = 'https://assets.vibestream.online/assets/data/songList.json';
+var song;
 var songList;
 
 fetch(url).then(
@@ -15,31 +16,15 @@ function play(songList) {
     var audio = new Audio(song.path);
     audio.play();
 
-    document.querySelector('#songName').innerHTML = song.name;
+    document.querySelector('#songName').innerHTML = song.information.name;
 };
 
-document.querySelector('#playbutton').addEventListener('click', play(songList));
+function restart() {
+  setTimeout(
+    play()
+  ),
+  3000
+};
 
 
-
-
-/*
-document.getElementById('playbutton').addEventListener('click', _ => {
-    fetch('https://assets-vibestream.netlify.app/assets/data/songList.json').then((r) => {
-        return r.json()
-    }).then(play)
-})
-    */
-
-
-
-
-
-/*
-window.myappname = {}
-
-
-
-//
-window.myappname.songLIst = input
-*/
+document.querySelector('#playbutton').addEventListener('click', function() { play(songList); })
