@@ -31,7 +31,7 @@ function checkParams() {
 
 
 function play(songList) {
-  var song = songList[Math.floor(Math.random() * songList.length)];
+  song = songList[Math.floor(Math.random() * songList.length)];
   if (genre === song.genre && mood === song.mood) {
    console.log(song);
    var audio = new Audio(song.path);
