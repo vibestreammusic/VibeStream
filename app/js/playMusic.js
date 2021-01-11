@@ -2,6 +2,14 @@ const url = 'https://assets.vibestream.online/assets/data/songList.json';
 var song;
 var songList;
 
+fetch(url).then(
+  function(u){ return u.json();}
+).then(
+  function(json){
+    songList = json;
+  }
+)
+
 let params = (new URL(document.location)).searchParams;
 //let genre = params.get('genre');
 //let mood = params.get('mood');
@@ -21,17 +29,6 @@ function checkParams() {
   }
 }
 
-
-console.log('Genre: ' + genre);
-console.log('Mood: ' + mood);
-
-fetch(url).then(
-    function(u){ return u.json();}
-  ).then(
-    function(json){
-      songList = json;
-    }
-  )
 
 function play(songList) {
   var song = songList[Math.floor(Math.random() * songList.length)];
