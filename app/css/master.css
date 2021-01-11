@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+@import url('https://vibestream.online/assets/BrushKing.oft');
+
+:root {
+    --font: 'Open Sans';
+    --titleFont: 'Brush King'
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+body {
+    background-image: url("https://assets.vibestream.online/assets/images/background.svg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.app {
+    top: 50%;
+}
+
+h1 {
+    font-family: var(--titleFont);
+    letter-spacing: 16px;
+    font-size: 64px;
+    text-align: center;
+}
