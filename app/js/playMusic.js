@@ -27,7 +27,6 @@ fetch(url).then(
   ).then(
     function(json){
       songList = json;
-      console.log('JSON is fetched')
     }
   )
 
