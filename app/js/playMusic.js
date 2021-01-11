@@ -40,10 +40,11 @@ function play(songList) {
   else {
     play(songList);
   }
-
-  document.querySelector('#songName').innerHTML = song.information.name;
 };
 
+function displaySongInfo() {
+  document.querySelector('#songName').innerHTML = song.information.name;
+}
 
 window.addEventListener('load', _ => checkParams());
 
