@@ -3,8 +3,11 @@ var song;
 var songList;
 
 let params = (new URL(document.location)).searchParams;
-let genre = params.get('genre');
-let mood = params.get('mood');
+//let genre = params.get('genre');
+//let mood = params.get('mood');
+
+let genre = 'piano';
+let mood = 'day';
 
 function checkParams() {
   if (genre !== 'piano' && mood !== 'day') {
