@@ -36,6 +36,7 @@ function play(songList) {
    console.log(song);
    var audio = new Audio(song.path);
    audio.play();
+   displaySongInfo();
   }
   else {
     play(songList);
