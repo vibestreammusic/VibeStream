@@ -45,6 +45,7 @@ function play(songList) {
 
 function displaySongInfo() {
   document.querySelector('#songName').innerHTML = song.information.name;
+  document.querySelector('#albumName').innerHTML = song.information.album;
 }
 
 window.addEventListener('load', _ => checkParams());
