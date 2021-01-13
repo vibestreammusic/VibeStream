@@ -21,4 +21,10 @@ figure button::after {
     border-style: solid;
     border-width: 20px 0 20px 40px;
     border-color: transparent transparent transparent white;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+figure button:hover::after {
+    border-width: 25px 0 25px 50px;
 }
