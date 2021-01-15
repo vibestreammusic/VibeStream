@@ -52,4 +52,4 @@ function restart() {
 
 window.addEventListener('load', _ => checkParams());
 
-document.querySelector('#playbutton').addEventListener('click', function() { play(songList); })
+document.querySelector('#playButton').addEventListener('click', function() { play(songList); })
