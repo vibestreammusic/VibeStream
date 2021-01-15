@@ -2,6 +2,9 @@ const url = 'https://assets.vibestream.online/assets/data/songList.json';
 var song;
 var songList;
 var songLenght;
+var audio;
+var isPlaying = false;
+var replayTimer;
 
 fetch(url).then(
   function(u){ return u.json();}
@@ -32,24 +35,23 @@ function checkParams() {
 
 
 function play(songList) {
-  song = songList[Math.floor(Math.random() * songList.length)];
-  if (genre === song.genre && mood === song.mood) {
-   var audio = new Audio(song.path);
-   audio.play();
-   displaySongInfo();
-   restart()
-  }
-  else {
-    play(songList);
-  }
+    song = songList[Math.floor(Math.random() * songList.length)];
+    if (genre === song.genre && mood === song.mood) {
+      audio = new Audio(song.path);
+      audio.play();
+      displaySongInfo();
+      restart()
+    }
+    else {
+      play(songList);
+    }
 };
 
 
 
 function restart() {
-  setTimeout(play, song.information.length * 1000, songList)
+  replayTimer = setTimeout(play, song.information.length * 1000, songList)
 }
 
 window.addEventListener('load', _ => checkParams());
 
-document.querySelector('#playButton').addEventListener('click', function() { play(songList); })
