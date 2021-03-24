@@ -33,12 +33,5 @@
 }
 
 #playButton.play:hover {
-    border-width: 40px 0px 40px 80px;
-    margin-top: -3px;
-}
-
-#playButton.pause:hover {
-    margin: -3px;
-    width: 80px;
-    height: 80px;
+    transform: scale(1.2);
 }
