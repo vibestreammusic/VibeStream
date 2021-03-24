@@ -2,7 +2,9 @@
 
 @font-face {
     font-family: 'Brush King';
-    src: url('https://assets.vibestream.online/assets/fonts/BrushKing.otf');
+    src:
+        local('Brush King'),
+        url('https://assets.vibestream.online/assets/fonts/BrushKing.otf');
 }
 
 :root {
@@ -39,11 +41,12 @@ body {
     border: none;
     border-radius: 32px;
     padding: 8px;
+    filter: drop-shadow(0 0 10px white);
 }
 
 h1 {
     font-family: var(--titleFont);
     letter-spacing: 0.5vw;
     font-size: 4vw;
-    margin-bottom: 0px;;
+    margin-bottom: 0px;
 }

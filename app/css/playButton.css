@@ -1,5 +1,5 @@
 #buttonContainer {
-    background-color: grey;
+    background-color: #383F51;
     width: 74px;
     height: 74px;
     margin: auto;
@@ -7,6 +7,7 @@
     border-radius: 100%;
     padding: 32px;
     margin-top: 16px;
+    filter: drop-shadow(0 0 5px #121212);
 }
 
 #playButton {
